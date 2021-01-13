@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Assignment 1</title>
+    <Style>
+        .assignment{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px  ;
+            padding: 20px;
+            background-color:rgb(197, 62, 8);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        div{
+            margin: 30px;
+            padding: 10px;
+            border: burlywood;
+            border-style: solid;
+            border-width: 5px;
+        }
+        .Task-1{
+            background-color: rgb(48, 169, 224);
+
+        }
+        .Task-2{
+            background-color: rgb(20, 126, 224);
+
+        }
+        .Task-3{
+            background-color: rgb(4, 84, 158);
+
+        }
+
+    </Style>
+</head>
+<body style="background-color: rgb(90, 20, 220);">
+    <h1 style="text-align: center; background-color: cornflowerblue; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> JavaScript Assignment</h1>
+    <section class ="assignment">
+
+    <div class="Task-1">
+        <h2>Task-1 Alerting Hello World</h2>
+        <button onclick="alertmsg()">Alert</button>
+    </div>
+
+    <div class="Task-2">
+        <h2>Task-2 Navigating to another page</h2>
+        <button onclick="redirect()">Redirect</button>
+
+    </div>
+
+    <div class="Task-3">
+        <h2>Task-3 Add Two Numbers</h2>
+        <span>Number 1 <input type="text" id="inp1"></span>
+        <span>Number 2 <input type="text" id="inp2"></span>
+        <p></p>
+        <span>Output<input type="text" id="out"></span>
+        <button onclick="add()">ADD</button>
+
+
+    </div>
+    </section>
+    
+
+    <script>
+        function alertmsg()
+        {
+            alert("Hello World")
+        }
+        function redirect()
+        {
+            alert("Thanks for visiting the site")
+            window.open("http://www.google.com")
+        }
+        function add()
+        {
+            let a=parseFloat( document.getElementById("inp1").value)
+            let b=parseFloat( document.getElementById("inp2").value)
+            console.log(a,typeof(a))
+            document.getElementById("out").value=a+b;
+            
+
+        }
+
+    </script>
+
+    
+</body>
+</html>
