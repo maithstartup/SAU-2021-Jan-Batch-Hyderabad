@@ -1,0 +1,61 @@
+<form [formGroup]="profileForm" >
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName" required>
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+
+  <label>
+    House Address:
+    <input type="text" formControlName="houseAddress">
+  </label>
+
+
+
+</form>
+
+<hr>
+
+<p>
+  <button (click)="storeProfile()">Store Profile</button>
+</p>
+
+
+<p>
+  <button (click)="showProfile()">show Profile</button>
+</p>
+
+
+<table mat-table [dataSource]="expenseGroups" class="mat-elevation-z8">  
+
+
+<ng-container matColumnDef="firstName">
+  <th mat-header-cell *matHeaderCellDef> Employee </th>
+  <td mat-cell *matCellDef="let element">{{element.firstName}}</td>
+</ng-container>
+
+
+<ng-container matColumnDef="lastName">
+  <th mat-header-cell *matHeaderCellDef> Last Name </th>
+  <td mat-cell *matCellDef="let element">
+    {{element.lastName}}
+  </td>
+</ng-container>
+
+<ng-container matColumnDef="houseAddress">
+  <th mat-header-cell *matHeaderCellDef> Last Name </th>
+  <td mat-cell *matCellDef="let element">
+    {{element.houseAddress}}
+  </td>
+</ng-container>
+
+
+
+<tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+<tr  mat-row *matRowDef="let row; columns: columnsToDisplay;"
+ ></tr>
+</table>
