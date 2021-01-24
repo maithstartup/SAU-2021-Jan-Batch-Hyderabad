@@ -1,0 +1,27 @@
+<label>
+  Name:
+  <input type="text" [formControl]="name">
+</label>
+
+
+<p>
+  Value: {{ name.value }}
+</p>
+
+<label>
+  Stored Name:
+  <input type="text" [formControl]="storename">
+</label>
+
+
+<p>
+  <button (click)="updateName()">Default Name</button>
+</p>
+
+<p>
+  <button (click)="storeName()">store Name</button>
+</p>
+
+<p>
+  <button (click)="showStorageName()">Show store Name</button>
+</p>
